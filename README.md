@@ -51,18 +51,6 @@ When a high-demand drop occurs, thousands of concurrent users and automated bots
 
 ---
 
-## 🏗️ Sprint Progression Roadmap
-
-- ✅ **Sprint 1: Architecture Baseline & Catalog Foundation** (`LAB-101`–`LAB-104`): Domain model, value objects (`Money`, `TimeWindow`), REST APIs, and DB migrations.
-- ✅ **Sprint 2: Concurrency & Inventory Protection** (`LAB-201`–`LAB-204`): Reproduced overselling bug, implemented atomic row-level locks, transactional boundaries, and high-concurrency benchmarks.
-- ✅ **Sprint 3: Reservation Lifecycle & Expiry Scanner** (`LAB-301`–`LAB-303`): Reservation state machine, background sweeper with transactional release, and deterministic clock testing.
-- ✅ **Sprint 4: Database Optimization & Read Scaling** (`LAB-401`–`LAB-404`): Compound B-tree indexing, query plan analysis (`EXPLAIN ANALYZE`), Redis cache-aside, and event-driven cache invalidation.
-- ✅ **Sprint 5: Cache Stampede Mitigation** (`LAB-501`–`LAB-504`): Benchmarked synchronized key expiry, implemented Request Coalescing (Singleflight) and TTL jitter, eliminating DB spikes.
-- ✅ **Sprint 6: Traffic Protection & Stateless Scale-Out** (`LAB-601`–`LAB-603`): Multi-instance stateless scale-out, L7 round-robin load balancing, atomic Redis token bucket rate limiting, and in-flight load shedding.
-- ✅ **Sprint 7: Idempotency & Retry-Safe API Design** (`LAB-701`–`LAB-703`): ACID PostgreSQL idempotency store, SHA-256 fingerprinting, replay response headers, and Full Jitter Exponential Backoff retries.
-- ✅ **Sprint 8: Payments, Adapters & Workflow Compensation** (`LAB-801`–`LAB-803`): Hexagonal payment port, `FakePaymentAdapter`, `PAYMENT_PENDING` states, late-webhook reconciliation, and Saga compensating transactions (`RefundRequest`).
-- ✅ **Sprint 9: Event-Driven Backbone & Async Consumers** (`LAB-901`): Domain event envelope, Event-Carried State Transfer contracts, and schema evolution upcasting.
-- ✅ **Sprint 10: Transactional Outbox, Idempotent Consumers & Dead Letters** (`LAB-1001`–`LAB-1004`): Dual-write defect reproduction, transactional outbox pattern, inbox deduplication, poison message isolation into DLQ, and operational replay.
 
 ---
 
