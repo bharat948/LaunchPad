@@ -1,0 +1,50 @@
+{
+  "name": "launchpad",
+  "version": "0.1.0",
+  "description": "Enterprise-grade platform for limited-inventory event drops, high-contention ticket sales, and resilient distributed workflows",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "system-design",
+    "concurrency",
+    "zero-oversell",
+    "transactional-outbox",
+    "idempotency",
+    "rate-limiting",
+    "saga-pattern",
+    "redis",
+    "postgresql",
+    "hexagonal-architecture"
+  ],
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:migrate": "tsx src/infrastructure/db/runMigrations.ts",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/domain",
+    "test:integration": "vitest run tests/integration",
+    "test:concurrency": "vitest run tests/concurrency",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/ioredis": "^4.28.10",
+    "@types/pg": "^8.23.1",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^6.0.0",
+    "pg": "^8.23.0"
+  }
+}
